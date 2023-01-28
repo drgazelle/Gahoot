@@ -1,4 +1,5 @@
 import javax.swing.JFrame;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -22,11 +23,12 @@ public class AppDriver {
         //frame.setIconImage(new ImageIcon("TEMP").getImage()); //Image Icon
         // frame attributes
         frame.setContentPane(panel);
-        frame.setSize(WIDTH + 17, HEIGHT + 40);
+        frame.setSize(WIDTH, HEIGHT);
         frame.setLocation(50, 50);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
+        frame.setBackground(Color.green);
 
         //Exports Database on Close
         frame.addWindowListener(new WindowAdapter() {
