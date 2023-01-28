@@ -28,7 +28,7 @@ public class AppDriver {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
-        frame.setBackground(Color.green);
+        frame.setBackground(Color.blue);
 
         //Exports Database on Close
         frame.addWindowListener(new WindowAdapter() {
