@@ -78,15 +78,6 @@ public class Database extends JPanel {
         return true;
     }
 
-    /** exportData method takes existing
-     *  Database and implements data.txt
-     *  @return true if successful, false if error
-     */
-    public boolean exportDatabase() {
-        //TO-DO
-        return true;
-    }
-
     public int databaseSize() {
         return locations.size();
     }
@@ -99,7 +90,10 @@ class Location {
     private String country;
     private String capital;
 
-    public Location() {}
+    public Location(String country, String capital) {
+        this.country = country;
+        this.capital = capital;
+    }
 
     public String getCountry() {
         return country;
