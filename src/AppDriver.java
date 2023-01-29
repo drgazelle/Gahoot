@@ -2,7 +2,6 @@ import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 /** AppDriver class creates the containing
  *  window for the simulation.
  *
@@ -10,8 +9,8 @@ import java.awt.event.WindowEvent;
  */
 public class AppDriver {
     //window dimensions
-    public static int WIDTH = 900;
-    public static int HEIGHT = 900;
+    public static int WIDTH = 600;
+    public static int HEIGHT = 600;
 
     private static JFrame frame;
 
@@ -28,7 +27,7 @@ public class AppDriver {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
         frame.setVisible(true);
-        frame.setBackground(Color.blue);
+        frame.setBackground(new Color(139,63,156));
 
         //Exports Database on Close
         frame.addWindowListener(new WindowAdapter() {

@@ -1,7 +1,22 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.awt.*;
 
 public class MainPanel extends JPanel implements MouseListener, MouseMotionListener, MouseWheelListener, KeyListener, ActionListener {
+        public void paintComponent(Graphics g) {
+            g.setColor(Color.lightGray);
+            g.fillRect(50, 25, 500, 200);
+            g.setColor(Color.black);
+            g.fillRect(100, 250, 400, 75);
+            g.setColor(Color.red);
+            g.fillRect(70,450,225,75);
+            g.setColor(Color.blue);
+            g.fillRect(70,350,225,75);
+            g.setColor(Color.yellow);
+            g.fillRect(320,450,225,75);
+            g.setColor(Color.green);
+            g.fillRect(320,350,225,75);
+        }
     private int mouseX;
     private int mouseY;
 
