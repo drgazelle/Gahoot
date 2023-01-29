@@ -1,0 +1,27 @@
+Index: src/AppDriver.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.JFrame;\r\nimport java.awt.event.WindowAdapter;\r\nimport java.awt.event.WindowEvent;\r\n\r\n/** AppDriver class creates the containing\r\n *  window for the simulation.\r\n *\r\n * @author RMizelle\r\n */\r\npublic class AppDriver {\r\n    //window dimensions\r\n    public static int WIDTH = 900;\r\n    public static int HEIGHT = 900;\r\n\r\n    private static JFrame frame;\r\n\r\n    public static MainPanel panel;\r\n\r\n    public static void main(String[] args) {\r\n        panel = new MainPanel();\r\n        frame = new JFrame(\"Automata\");\r\n        //frame.setIconImage(new ImageIcon(\"TEMP\").getImage()); //Image Icon\r\n        // frame attributes\r\n        frame.setContentPane(panel);\r\n        frame.setSize(WIDTH + 17, HEIGHT + 40);\r\n        frame.setLocation(50, 50);\r\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        frame.setResizable(false);\r\n        frame.setVisible(true);\r\n\r\n        //Exports Database on Close\r\n        frame.addWindowListener(new WindowAdapter() {\r\n            public void windowClosing(WindowEvent e) {\r\n                //TO-DO\r\n                frame.dispose();\r\n                System.exit(0);\r\n            }\r\n        });\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AppDriver.java b/src/AppDriver.java
+--- a/src/AppDriver.java	(revision 559bd9c21551db0d94bc56b446da08a61bc7558a)
++++ b/src/AppDriver.java	(date 1674939852518)
+@@ -1,7 +1,9 @@
+ import javax.swing.JFrame;
+ import java.awt.event.WindowAdapter;
+ import java.awt.event.WindowEvent;
+-
++import java.awt.Graphics;
++import java.awt.Graphics2D;
++import java.awt.Polygon;
+ /** AppDriver class creates the containing
+  *  window for the simulation.
+  *
+@@ -38,4 +40,5 @@
+         });
+ 
+     }
++
+ }
