@@ -65,8 +65,7 @@ public class Database extends JPanel {
                 String line = input.nextLine();
                 //splits up data fields
                 String[] parts = line.split("#");
-                //removes brackets from data fields
-
+                locations.add(new Location(parts[0], parts[1]));
             }
             //closes scanner
             input.close();
@@ -81,6 +80,14 @@ public class Database extends JPanel {
     public int databaseSize() {
         return locations.size();
     }
+
+    /** Returns a random location within database
+     *
+     * @return a random location
+     */
+    public Location getRandomLocation() {
+        return locations.get((int) (Math.random() * locations.size()));
+    }
 }
 
 /** Location object stores a country
@@ -90,16 +97,36 @@ class Location {
     private String country;
     private String capital;
 
+    /** 2-arg constructor istantiates country and capital
+     *
+     * @param country name
+     * @param capital name
+     */
     public Location(String country, String capital) {
         this.country = country;
         this.capital = capital;
     }
 
+    // Getter Methods //
     public String getCountry() {
         return country;
     }
 
     public String getCapital() {
         return capital;
+    }
+
+    @Override
+    public String toString() {
+        return "Country: " + country + "\nCapital: " + capital;
+    }
+}
+ class Tester {
+    public static void main(String[] args) {
+        Database database = new Database();
+        for(int i = 0; i < 4; i++) {
+            Location random = database.getRandomLocation();
+            System.out.println(random);
+        }
     }
 }
